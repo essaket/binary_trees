@@ -1,8 +1,5 @@
 #include "binary_trees.h"
 
-int is_perfect(const binary_tree_t *tree, size_t leaf_depth, size_t level);
-const binary_tree_t *get_leaf(const binary_tree_t *tree);
-
 /**
  * binary_tree_is_perfect - Checks if a binary tree is perfect
  *

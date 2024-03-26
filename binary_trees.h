@@ -41,5 +41,7 @@ int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+int is_perfect(const binary_tree_t *tree, size_t leaf_depth, size_t level);
+const binary_tree_t *get_leaf(const binary_tree_t *tree);
 
 #endif /* _BINARY_TREES_H_ */
