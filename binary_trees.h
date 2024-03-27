@@ -27,11 +27,11 @@ typedef struct binary_tree_s
  * @node: a node of binary tree
  * @next: the next node to traverse to in the binary tree
  */
-typedef struct levelorder_tree_s
+typedef struct levelorder_traversal_s
 {
 	binary_tree_t *node;
-	struct levelorder_tree_s *next;
-} levelorder_tree_t;
+	struct levelorder_traversal_s *next;
+} levelorder_traversal_t;
 
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
