@@ -49,7 +49,7 @@ levelorder_traversal_t *create_node(binary_tree_t *node)
 		return (NULL);
 
 	new_node->node = node;
-	new->next = NULL;
+	new_node->next = NULL;
 
 	return (new_node);
 }
