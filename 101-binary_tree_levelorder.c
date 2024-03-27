@@ -6,7 +6,7 @@ void pint_push(binary_tree_t *node, levelorder_traversal_t *head,
 void free_queue(levelorder_traversal_t *head);
 void pop(levelorder_traversal_t **head);
 /**
- * binary_tree_levelorder - Goes through a binary tree using level-order traversal
+ * binary_tree_levelorder - Goes through a binary tree by level-order traversal
  *
  * @tree: a pointer to the root node of the tree to traverse
  * @func: a pointer to a function to call for each node
@@ -45,7 +45,7 @@ levelorder_traversal_t *create_node(binary_tree_t *node)
 	levelorder_traversal_t *new_node;
 
 	new_node = malloc(sizeof(levelorder_traversal_t));
-	if ( new_node == NULL)
+	if (new_node == NULL)
 		return (NULL);
 
 	new_node->node = node;
