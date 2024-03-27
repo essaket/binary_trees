@@ -22,7 +22,7 @@ typedef struct binary_tree_s
 } binary_tree_t;
 
 /**
- * struct levelorder_tree_s - Level order traversal
+ * struct levelorder_traversal_s - Level order traversal
  *
  * @node: a node of binary tree
  * @next: the next node to traverse to in the binary tree
