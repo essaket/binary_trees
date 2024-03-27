@@ -3,7 +3,7 @@
 levelorder_traversal_t *create_node(binary_tree_t *node);
 void pint_push(binary_tree_t *node, levelorder_traversal_t *head,
 		levelorder_traversal_t **tail, void (*func)(int));
-void free_queue(levelorder_traversal_t *head);
+void free_traversal(levelorder_traversal_t *head);
 void pop(levelorder_traversal_t **head);
 /**
  * binary_tree_levelorder - Goes through a binary tree by level-order traversal
@@ -76,7 +76,7 @@ void pint_push(binary_tree_t *node, levelorder_traversal_t *head,
 		new_node = create_node(node->left);
 		if (new_node == NULL)
 		{
-			free_queue(head);
+			free_traversal(head);
 			exit(1);
 		}
 		(*tail)->next = new_node;
@@ -87,7 +87,7 @@ void pint_push(binary_tree_t *node, levelorder_traversal_t *head,
 		new_node = create_node(node->right);
 		if (new_node == NULL)
 		{
-			free_queue(head);
+			free_traversal(head);
 			exit(1);
 		}
 		(*tail)->next = new_node;
@@ -96,11 +96,11 @@ void pint_push(binary_tree_t *node, levelorder_traversal_t *head,
 }
 
 /**
- * free_queue - Frees a levelorder_queue_t queue.
+ * free_traversal - Frees a levelorder_traversal_t queue.
  *
  * @head: a pointer to the head of the queue.
  */
-void free_queue(levelorder_traversal_t *head)
+void free_traversal(levelorder_traversal_t *head)
 {
 	levelorder_traversal_t *tmp;
 
