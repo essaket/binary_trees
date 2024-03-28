@@ -13,7 +13,7 @@ size_t height(const binary_tree_t *tree);
 
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
-	return (!tree ? 0 : is_avl_helper(tree, INT_MIN, INT_MAX));
+	return (!tree ? 0 : is_avl_check(tree, INT_MIN, INT_MAX));
 }
 
 /**
