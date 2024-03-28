@@ -25,6 +25,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 		return (*tree);
 	}
 	avl_insert_recursive(tree, *tree, &new_avl, value);
+	
 	return (new_avl);
 }
 
@@ -43,20 +44,20 @@ avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent,
 {
 	int x;
 
-	if (*tree == NULL)
+	if (!(*tree))
 		return (*new_avl = binary_tree_node(parent, value));
 
 	if ((*tree)->n > value)
 	{
 		(*tree)->left = avl_insert_recursive(&(*tree)->left, *tree, new_avl, value);
-		if ((*tree)->left == NULL)
+		if (!((*tree)->left))
 			return (NULL);
 	}
 	else if ((*tree)->n < value)
 	{
 		(*tree)->right = avl_insert_recursive(&(*tree)->right,
 				*tree, new_avl, value);
-		if ((*tree)->right == NULL)
+		if (!((*tree)->right))
 			return (NULL);
 	}
 	else
