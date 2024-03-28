@@ -92,3 +92,4 @@ heap_t *max(heap_t *tree)
 	}
 	return (curr_max);
 }
+}
