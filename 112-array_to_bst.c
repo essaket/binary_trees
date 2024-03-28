@@ -26,7 +26,7 @@ bst_t *array_to_bst(int *array, size_t size)
 		}
 		if (j == i)
 		{
-			if (!(bst_insert(&tree, array[index])))
+			if (!(bst_insert(&tree, array[i])))
 				return (NULL);
 		}
 	}
