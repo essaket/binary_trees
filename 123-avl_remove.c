@@ -11,8 +11,8 @@ void bal(avl_t **tree);
  * @root: a pointer to the root node of the tree for removing a node
  * @value: the value to remove in the tree
  *
- * Return: a pointer to the new root node of the tree after removing the desired value,
- *		and after rebalancing
+ * Return: a pointer to the new root node of the tree after removing
+ *		the desired value, and after rebalancing
  */
 
 avl_t *avl_remove(avl_t *root, int value)
@@ -117,7 +117,9 @@ int successor(bst_t *node)
 	int y = 0;
 
 	if (!node)
+	{
 		return (0);
+	}
 	else
 	{
 		y = successor(node->left);
