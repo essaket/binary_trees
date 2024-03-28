@@ -45,17 +45,17 @@ avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent,
 	int bfactor;
 
 	if (*tree == NULL)
-		return (*new = binary_tree_node(parent, value));
+		return (*new_avl = binary_tree_node(parent, value));
 
 	if ((*tree)->n > value)
 	{
-		(*tree)->left = avl_insert_recursive(&(*tree)->left, *tree, new, value);
+		(*tree)->left = avl_insert_recursive(&(*tree)->left, *tree, new_avl, value);
 		if ((*tree)->left == NULL)
 			return (NULL);
 	}
 	else if ((*tree)->n < value)
 	{
-		(*tree)->right = avl_insert_recursive(&(*tree)->right, *tree, new, value);
+		(*tree)->right = avl_insert_recursive(&(*tree)->right, *tree, new_avl, value);
 		if ((*tree)->right == NULL)
 			return (NULL);
 	}
