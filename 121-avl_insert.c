@@ -25,7 +25,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 		return (*tree);
 	}
 	avl_insert_recursive(tree, *tree, &new_avl, value);
-	
+
 	return (new_avl);
 }
 
