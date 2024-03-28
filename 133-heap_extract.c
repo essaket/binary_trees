@@ -40,8 +40,6 @@ int heap_extract(heap_t **root)
 
 void recurse_extract(heap_t *tree)
 {
-	void recurse_extract(heap_t *tree)
-{
 	heap_t *sub_max, *right_max = NULL;
 
 	if (!tree->left)
@@ -91,5 +89,4 @@ heap_t *max(heap_t *tree)
 			curr_max = tree;
 	}
 	return (curr_max);
-}
 }
