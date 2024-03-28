@@ -8,7 +8,8 @@ size_t height(const binary_tree_t *tree);
 /**
  * avl_insert - Inserts a value in an AVL tree
  *
- * @tree: a double pointer to the root node of the AVL tree for inserting the value
+ * @tree: a double pointer to the root node of
+ *		the AVL tree for inserting the value
  * @value: the value to store in the node to be inserted
  *
  * Return: a pointer to the created node, or NULL on failure
@@ -33,7 +34,7 @@ avl_t *avl_insert(avl_t **tree, int value)
  *
  * @tree: a double pointer to the root node of the AVL tree to insert into.
  * @parent: the parent node of the current working node.
- * @new: a double pointer to store the new node.
+ * @new_avl: a double pointer to store the new node.
  * @value: the value to insert into the AVL tree.
  *
  * Return: a pointer to the new root after insertion, or NULL on failure.
@@ -54,7 +55,8 @@ avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent,
 	}
 	else if ((*tree)->n < value)
 	{
-		(*tree)->right = avl_insert_recursive(&(*tree)->right, *tree, new_avl, value);
+		(*tree)->right = avl_insert_recursive(&(*tree)->right,
+				*tree, new_avl, value);
 		if (!((*tree)->right))
 			return (NULL);
 	}
