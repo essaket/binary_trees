@@ -91,5 +91,6 @@ int tree_is_complete(const binary_tree_t *tree, int i, int cnodes)
 
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-	return (!tree ? 0 : binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
+	return (!tree ? 0 : binary_tree_size(tree->left) +
+			binary_tree_size(tree->right) + 1);
 }
