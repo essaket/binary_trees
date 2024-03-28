@@ -13,31 +13,27 @@ heap_t *max(heap_t *tree);
 
 int heap_extract(heap_t **root)
 {
-	int v;
+	int value;
 
-	if (!(*root))
+	if (!*root)
 		return (0);
-	v = (*root)->n;
-	if (!((*root)->left))
+	value = (*root)->n;
+	if (!(*root)->left)
 	{
-		v = (*root)->n;
+		value = (*root)->n;
 		free(*root);
 		*root = NULL;
-		return (v);
+		return (value);
 	}
 	recurse_extract(*root);
-
-	return (v);
+	return (value);
 }
 
 /**
- * recurse_extract - Recursively extracts the max from the tree
+ * recurse_extract - Recursively extracts the max from the tree.
  *
- * @tree: the pointer to the root of the tree
- *
- * Return: a void
+ * @tree: The pointer to the root of the tree.
  */
-
 void recurse_extract(heap_t *tree)
 {
 	heap_t *sub_max, *right_max = NULL;
