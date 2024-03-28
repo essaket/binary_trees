@@ -1,5 +1,7 @@
 #include "binary_trees.h"
 
+size_t tree_size(const binary_tree_t *tree);
+
 /**
  * heap_to_sorted_array - Converts a Binary Max Heap
  *			to a sorted array of integers
